@@ -133,6 +133,17 @@
 
     var_dump($arrRandomNumbers);
     ?>
+    <h2>SNACK 5</h2>
+    <?php
+    $text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi consectetur accusamus non architecto, temporibus, voluptas accusantium, aspernatur placeat tempora voluptate quo quos nobis ipsam? Voluptatum vitae ipsam dolorum sunt culpa!
+    Sunt totam labore asperiores magni. Veritatis, dicta commodi eveniet sed illo rerum soluta officia cupiditate perspiciatis numquam aperiam? Culpa voluptates quas praesentium laudantium itaque a quaerat veritatis consectetur delectus numquam.
+    Ipsum, veritatis praesentium eligendi voluptas quia delectus placeat numquam ipsa harum repellat dolorem aliquam, perferendis totam expedita. Maiores ab saepe ex, quo hic, ipsa architecto pariatur tenetur voluptatem commodi in!";
+    $arrParagrafi=explode('. ', $text);
+    for ($i = 0; $i < count($arrParagrafi); $i++) { ?>
+        <p><?= $arrParagrafi[$i] ?></p>
+    <?php
+    };
+    ?>
 </body>
 
 </html>
