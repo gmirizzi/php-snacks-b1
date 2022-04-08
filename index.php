@@ -93,13 +93,13 @@
     ?>
     <h2>SNACK 2</h2>
     <form method="get">
-    <!-- Form per prendere i dati dell'utente -->
+        <!-- Form per prendere i dati dell'utente -->
         <div>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome">
         </div>
         <div>
-            <label for="email">Email:</label>
+            <label for="email">E-mail:</label>
             <input type="email" id="email" name="email">
         </div>
         <div>
@@ -115,11 +115,23 @@
         $età = $_GET['età'];
 
         if (strlen($nome) > 3 && is_numeric($età) && strpos($email, "@") && strpos($email, ".")) {
-            echo "<div>Accesso consentito</div>";
+            echo "<div>Accesso riuscito</div>";
         } else {
             echo "<div>Accesso negato</div>";
         }
     }
+    ?>
+    <h2>SNACK 4</h2>
+    <?php
+    $arrRandomNumbers= [];
+    do {
+        $randomNumber = rand(1, 100);
+        if (!in_array($randomNumber, $arrRandomNumbers)) {
+            $arrRandomNumbers[] = $randomNumber;
+        };
+    } while (count($arrRandomNumbers) < 15);
+
+    var_dump($arrRandomNumbers);
     ?>
 </body>
 
